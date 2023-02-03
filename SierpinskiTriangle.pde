@@ -2,6 +2,7 @@ float minSize = 10;
 
 public void setup() {
   size(1000, 1000);
+  background(0);
 }
 
 public void draw() {
@@ -9,7 +10,7 @@ public void draw() {
     minSize = (float)Math.sqrt(1000-mouseX)*2; 
   }
   fill(255);
-  noStroke();
+  stroke(200);
   sierpinski(50, 950, 900, minSize);
 }
 
@@ -32,5 +33,6 @@ public void coloring(float len) {
   if(opacity > 90) {
     opacity = 90;
   }
+  noStroke();
   fill(0,  opacity);
 }
